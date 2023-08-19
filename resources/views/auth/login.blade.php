@@ -4,12 +4,17 @@
 <!-- 適切なURLを入力してください -->
 {!! Form::open(['url' => '/〇〇']) !!}
 
-<p>AtlasSNSへようこそ</p>
+<p class="title white">AtlasSNSへようこそ</p>
 
-{{ Form::label('e-mail') }}
-{{ Form::text('mail',null,['class' => 'input']) }}
-{{ Form::label('password') }}
-{{ Form::password('password',['class' => 'input']) }}
+<div class="form-title">
+  {{ Form::label('mail address') }} <br>
+</div>
+{{ Form::text('mail',null,['class' => 'input']) }} <br>
+
+<div class="form-title">
+  {{ Form::label('password') }} <br>
+</div>
+{{ Form::password('password',['class' => 'input']) }} <br>
 
 {{ Form::submit('ログイン') }}
 

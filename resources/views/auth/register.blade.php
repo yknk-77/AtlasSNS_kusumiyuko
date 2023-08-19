@@ -2,27 +2,56 @@
 
 @section('content')
 <!-- 適切なURLを入力してください -->
-{!! Form::open(['url' => '/〇〇']) !!}
+{!! Form::open(['url' => '/register']) !!}
 
-<h2>新規ユーザー登録</h2>
+<div class="form-group">
+  @if ($errors->any())
+  <div>
+    <ul>
+      @foreach ($errors->all() as $error)
+      <li class="message">{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+  @endif
+  <h2 class="title white">新規ユーザー登録</h2>
 
-{{ Form::label('ユーザー名') }}
-{{ Form::text('username',null,['class' => 'input']) }}
+  <div class="form-title">
+    {{ Form::label('user name') }} <br>
+  </div>
+  <div class="form-text">
+    {{ Form::text('username',null,['class' => 'input', 'placeholder' => 'admin']) }} <br>
+  </div>
 
-{{ Form::label('メールアドレス') }}
-{{ Form::text('mail',null,['class' => 'input']) }}
+  <div class="form-title">
+    {{ Form::label('mail address') }} <br>
+  </div>
+  <div class=" form-text">
+    {{ Form::text('mail',null,['class' => 'input', 'placeholder' => 'admin@atlas.com']) }} <br>
+  </div>
 
-{{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+  <div class="form-title">
+    {{ Form::label('password') }} <br>
+  </div>
+  <div class="form-text">
+    {{ Form::password('password',null,['class' => 'input']) }} <br>
+  </div>
 
-{{ Form::label('パスワード確認') }}
-{{ Form::text('password_confirmation',null,['class' => 'input']) }}
+  <div class="form-title">
+    {{ Form::label('password confirm') }} <br>
+  </div>
+  <div class="form-text">
+    {{ Form::password('password_confirmation',null,['class' => 'input']) }} <br>
+  </div>
 
-{{ Form::submit('登録') }}
+  <div class="button">
+    {{ Form::submit('REGISTER', [ 'class' => 'button white']) }}
+  </div>
 
-<p><a href="/login">ログイン画面へ戻る</a></p>
+  <p class="link"><a class="white" href="/login">ログイン画面へ戻る</a></p>
 
-{!! Form::close() !!}
+  {!! Form::close() !!}
+</div>
 
 
 @endsection
