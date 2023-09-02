@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <!--IEブラウザ対策-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="ログアウト中のページ" />
+  <meta name="logout" content="ログアウト中のページ" />
   <title></title>
   <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
   <link rel="stylesheet" href="{{ asset('css/logout.css') }} ">
@@ -19,15 +20,18 @@
   <link rel="apple-touch-icon-precomposed" href="画像のURL" />
   <!--OGPタグ/twitterカード-->
 </head>
+
 <body class="container">
-  <header>
-    <h1><img class="icon" src="images/atlas.png"></h1>
-    <p class="sub-title">Social Network Service</p>
-  </header>
   <div id="container">
+    <header>
+      <h1><img class="icon" src="images/atlas.png"></h1>
+      <p class="sub-title">Social Network Service</p>
+    </header>
     @yield('content')
   </div>
-  <script src="JavaScriptファイルのURL"></script>
-  <script src="/public/js/app.js"></script>
+  <script src="{{ asset('js/app.js') }}"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </body>
+
 </html>

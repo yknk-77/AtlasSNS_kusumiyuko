@@ -5,16 +5,23 @@ html {
 }
 
 body {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
-    margin: 100px auto 40px;
+    margin: 0 auto;
     text-align: center;
-    background: linear-gradient(to bottom,
-            #0369C7, #43A0F6, #DFD953);
+    background: linear-gradient(#0067C6 0%, #4dafff 55%, #A1C59F 75%, #f2e144 100%);
+}
+
+header {
+    margin: 0 auto;
+    padding-bottom: 60px;
 }
 
 .container {
-    width: 50%;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon {
@@ -28,17 +35,20 @@ body {
 
 .title {
     font-weight: 100;
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 40px;
 }
 
 .white {
     color: #fff;
 }
 
+form {
+    display: inline-block;
+}
+
 .form-group {
-    margin: 10px auto;
-    width: 40%;
+    width: 300px;
     padding: 30px;
     background: rgba(0, 0, 0, 0.2);
     border: none;
@@ -65,19 +75,19 @@ body {
 
 input {
     /* display: inline-block; */
-    width: 100%;
+    width: 93%;
     padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 120%;
 }
 
-
-.button {
-    /* width: 80px; */
+.btn {
+    width: 120px;
+    margin-left: auto;
     display: flex;
     border-radius: 10px;
-    font-size: 22pt;
+    font-size: 24px;
     text-align: center;
     cursor: pointer;
     padding: 12px 12px;
@@ -89,16 +99,16 @@ input {
     /* 透明度     */
     transition: .3s;
     /* なめらか変化 */
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
 }
 
-.button:hover {
+.btn:hover {
     opacity: 0.8;
 }
 
 
 .link {
-    font-size: 26px;
-    margin: 30px 0 10px;
+    font-size: 20px;
+    margin: 50px 0 10px;
 }

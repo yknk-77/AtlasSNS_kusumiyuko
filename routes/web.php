@@ -11,17 +11,21 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', function () {
+  return view('welcome');
+});
 
-//Auth::routes();
+// Auth認証
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
 
 //ログアウト中のページ
 Route::get('/login', 'Auth\LoginController@login');
 Route::post('/login', 'Auth\LoginController@login');
+
+Route::get('/logout', 'Auth\LoginController@logout');
+Route::post('/logout', 'Auth\LoginController@logout');
 
 Route::get('/register', 'Auth\RegisterController@register');
 Route::post('/register', 'Auth\RegisterController@register');
@@ -29,12 +33,23 @@ Route::post('/register', 'Auth\RegisterController@register');
 Route::get('/added', 'Auth\RegisterController@added');
 Route::post('/added', 'Auth\RegisterController@added');
 
-//ログイン中のページ
-Route::get('/top','PostsController@index');
 
-Route::get('/profile','UsersController@profile');
+//ログイン中のページ アクセス制限
+Route::group(['middleware' => 'auth'], function () {
 
-Route::get('/search','UsersController@index');
+  // トップ画面
+  Route::get('/top', 'PostsController@index');
 
-Route::get('/follow-list','PostsController@index');
-Route::get('/follower-list','PostsController@index');
+  // プロフィール画面
+  Route::get('/profile', 'UsersController@profile');
+
+  // 検索画面
+  Route::get('/search', 'UsersController@search');
+
+  // フォロー・フォロワー画面
+  Route::get('/follow-list', 'PostsController@index');
+  Route::get('/follower-list', 'PostsController@index');
+
+  // ユーザー関連 CRUD
+  Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'edit', 'update']]);
+});

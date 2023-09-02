@@ -17,27 +17,37 @@ class UsersTableSeeder extends Seeder
             [
                 'username' => 'Atlas一郎',
                 'mail' => 'atlas1@xxx.com',
-                'password' => bcrypt('123123')
+                'password' => bcrypt('12345678')
             ],
             [
                 'username' => 'Atlas二郎',
                 'mail' => 'atlas2@xxx.com',
-                'password' => bcrypt('234234')
+                'password' => bcrypt('12345678')
             ],
             [
                 'username' => 'Atlas三郎',
                 'mail' => 'atlas3@xxx.com',
-                'password' => bcrypt('345345')
+                'password' => bcrypt('12345678')
             ],
             [
                 'username' => 'Atlas四郎',
                 'mail' => 'atlas4@xxx.com',
-                'password' => bcrypt('456456')
+                'password' => bcrypt('12345678')
             ],
             [
                 'username' => 'Atlas五郎',
                 'mail' => 'atlas5@xxx.com',
-                'password' => bcrypt('567567')
+                'password' => bcrypt('12345678')
+            ],
+            [
+                'username' => 'Atlas六郎',
+                'mail' => 'atlas6@xxx.com',
+                'password' => bcrypt('12345678')
+            ],
+            [
+                'username' => 'Atlas七海',
+                'mail' => 'atlas7@xxx.com',
+                'password' => bcrypt('12345678')
             ]
         ]);
     }

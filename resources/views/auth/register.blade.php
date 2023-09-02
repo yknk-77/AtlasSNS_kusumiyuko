@@ -44,8 +44,8 @@
     {{ Form::password('password_confirmation',null,['class' => 'input']) }} <br>
   </div>
 
-  <div class="button">
-    {{ Form::submit('REGISTER', [ 'class' => 'button white']) }}
+  <div class="btn">
+    {{ Form::submit('REGISTER', [ 'class' => 'btn white']) }}
   </div>
 
   <p class="link"><a class="white" href="/login">ログイン画面へ戻る</a></p>

@@ -1,6 +1,9 @@
 @extends('layouts.login')
 
 @section('content')
-<h2>機能を実装していきましょう。</h2>
+
+<!-- 投稿フォーム -->
+<h2>機能を実装</h2>
+
 
 @endsection
