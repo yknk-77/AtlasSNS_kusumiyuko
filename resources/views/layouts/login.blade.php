@@ -52,14 +52,14 @@
                     <p>〇〇名</p>
                     <!-- <p>{{ Auth::user()->followings }}名</p> -->
                 </div>
-                <p class="btn"><a class="btn white btn-text" href="/follow-list">フォローリスト</a></p>
+                <p class="btn-blue"><a class="btn-blue btn-text" href="/follow-list">フォローリスト</a></p>
                 <div>
                     <p>フォロワー数</p>
                     <p>〇〇名</p>
                 </div>
-                <p class="btn"><a class="btn white btn-text" href="/follower-list">フォロワーリスト</a></p>
+                <p class="btn-blue"><a class="btn-blue btn-text" href="/follower-list">フォロワーリスト</a></p>
             </div>
-            <p class=" btn"><a class="btn white btn-text" href="/search">ユーザー検索</a></p>
+            <p class=" btn-blue"><a class="btn-blue btn-text" href="/search">ユーザー検索</a></p>
         </div>
     </div>
     <!-- フッター -->

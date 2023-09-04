@@ -91,7 +91,7 @@ nav a:hover {
     border-left: 1px solid #727272;
 }
 
-.btn {
+.btn-blue {
     width: 120px;
     margin-left: auto;
     display: flex;
@@ -110,6 +110,7 @@ nav a:hover {
 }
 
 .btn-text {
+    color: #fff;
     font-size: 14px;
 }
 
@@ -120,4 +121,18 @@ nav a:hover {
 
 .gray {
     color: #848484;
+}
+
+/* プロフィール編集画面 */
+.form-wrapper {
+    margin: 80px 40%;
+    display: flex;
+}
+
+.form-content {
+    display: flex;
+}
+
+.btn-red {
+    background: #ED3B50;
 }
