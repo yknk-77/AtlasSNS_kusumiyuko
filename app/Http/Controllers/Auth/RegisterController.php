@@ -36,17 +36,19 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');    }
+        $this->middleware('guest')->except('logout');
+    }
 
-    public function register(Request $request){
-        if($request->isMethod('post')){
+    public function register(Request $request)
+    {
+        if ($request->isMethod('post')) {
 
             //バリデーション設定
             $request->validate([
-                'username' => 'required|min:2|max:12',
-                'mail' => 'required|min:5|max:40|unique:users,mail|email',
-                'password' => 'required|regex:/\A([a-zA-Z0-9]{8,20})+\z/u|confirmed',
-                'password_confirmation' => 'required'
+                'username' => 'required|min:2|max:12', //必須、文字列、2文字以上12文字以内
+                'mail' => 'required|min:5|max:40|unique:users,mail|email', //必須、文字列、メールアドレス形式、5文字以上40文字以内、登録済みメールアドレス使用不可
+                'password' => 'required|regex:/\A([a-zA-Z0-9]{8,20})+\z/u|confirmed', //必須、英数字のみ、8文字以上20文字以内
+                'password_confirmation' => 'required|regex:/\A([a-zA-Z0-9]{8,20})+\z/u' //必須、英数字のみ、8文字以上20文字以内、パスワード欄と一致しているか
             ]);
 
             $username = $request->input('username');
@@ -59,18 +61,18 @@ class RegisterController extends Controller
                 'password' => bcrypt($password),
             ]);
 
-        // セッションでユーザー名を保存する
-        $request->session()->put('username', $username);
-        // セッションでユーザー名を取得する
-        $request->session()->get('username');
+            // セッションでユーザー名を保存する
+            $request->session()->put('username', $username);
+            // セッションでユーザー名を取得する
+            $request->session()->get('username');
 
             return redirect('added');
-
         }
         return view('auth.register');
     }
 
-    public function added(){
+    public function added()
+    {
 
         return view('auth.added');
     }

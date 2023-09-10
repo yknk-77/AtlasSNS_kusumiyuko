@@ -40,8 +40,10 @@ Route::group(['middleware' => 'auth'], function () {
   // トップ画面
   Route::get('/top', 'PostsController@index');
 
-  // プロフィール画面
-  Route::get('/profile', 'UsersController@profile');
+  // プロフィール画面表示
+  Route::get('/profile', 'UsersController@show');
+  //プロフィール編集
+  Route::put('/profile', 'UsersController@profileUpdate');
 
   // 検索画面
   Route::get('/search', 'UsersController@search');
