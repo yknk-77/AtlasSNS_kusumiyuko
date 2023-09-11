@@ -37,8 +37,9 @@ Route::post('/added', 'Auth\RegisterController@added');
 //ログイン中のページ アクセス制限
 Route::group(['middleware' => 'auth'], function () {
 
-  // トップ画面
+  // トップ画面 投稿
   Route::get('/top', 'PostsController@index');
+  Route::post('/top', 'PostsController@post');
 
   // プロフィール画面表示
   Route::get('/profile', 'UsersController@show');

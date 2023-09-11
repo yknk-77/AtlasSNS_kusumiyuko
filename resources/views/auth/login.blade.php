@@ -3,6 +3,8 @@
 @section('content')
 <!-- 適切なURLを入力してください -->
 {!! Form::open(['url' => '/login']) !!}
+<!-- 脆弱性対策 -->
+@csrf
 
 <div class="form-group">
 
