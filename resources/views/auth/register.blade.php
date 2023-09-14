@@ -7,6 +7,7 @@
 @csrf
 
 <div class="form-group">
+  <!-- エラーメッセージ表示 -->
   @if ($errors->any())
   <div>
     <ul>

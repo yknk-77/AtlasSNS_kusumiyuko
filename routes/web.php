@@ -38,8 +38,10 @@ Route::post('/added', 'Auth\RegisterController@added');
 Route::group(['middleware' => 'auth'], function () {
 
   // トップ画面 投稿
-  Route::get('/top', 'PostsController@index');
-  Route::post('/top', 'PostsController@post');
+  Route::get('/top', 'PostsController@index'); //top画面表示
+  Route::post('/top', 'PostsController@post'); //投稿機能
+  Route::get('/top', 'PostsController@show'); //タイムライン表示機能
+  Route::post('/top', 'PostsController@update'); //投稿編集機能
 
   // プロフィール画面表示
   Route::get('/profile', 'UsersController@show');

@@ -43,7 +43,7 @@ class RegisterController extends Controller
     {
         if ($request->isMethod('post')) {
 
-            //バリデーション設定
+            // バリデーション設定
             $request->validate([
                 'username' => 'required|min:2|max:12', //必須、文字列、2文字以上12文字以内
                 'mail' => 'required|min:5|max:40|unique:users,mail|email', //必須、文字列、メールアドレス形式、5文字以上40文字以内、登録済みメールアドレス使用不可

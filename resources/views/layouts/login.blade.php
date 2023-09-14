@@ -29,6 +29,8 @@
         <!-- アコーディオンメニュー -->
         <div class="nav" id="nav">
             <p class="nav-open">{{ Auth::user()->username }}　さん</p>
+            <img class="icon nav-open" src="{{ asset('images/icon1.png') }}" alt="{{ Auth::user()->username }}さんのアイコン">
+            <!-- アコーディオン部分 -->
             <nav>
                 <ul>
                     <li><a class="nav-item gray" href="/top">HOME</a></li>
@@ -36,7 +38,6 @@
                     <li><a class="nav-item gray" href="/logout">ログアウト</a></li>
                 </ul>
             </nav>
-            <img class="icon" src="{{ asset('images/icon1.png') }}" alt="{{ Auth::user()->username }}さんのアイコン">
         </div>
     </header>
     <div id="row">

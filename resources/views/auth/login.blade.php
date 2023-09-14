@@ -1,12 +1,21 @@
 @extends('layouts.logout')
 
 @section('content')
-<!-- 適切なURLを入力してください -->
 {!! Form::open(['url' => '/login']) !!}
 <!-- 脆弱性対策 -->
 @csrf
 
 <div class="form-group">
+  <!-- エラーメッセージ表示 -->
+  @if ($errors->any())
+  <div>
+    <ul>
+      @foreach ($errors->all() as $error)
+      <li class="message">{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+  @endif
 
   <p class="title white">AtlasSNSへようこそ</p>
 
