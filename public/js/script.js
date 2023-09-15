@@ -1,9 +1,9 @@
 // ヘッダーの動き
 jQuery($(function () {
   //クリックで動く
-  $('.nav-open').click(function () {
-    $('.nav-open').toggleClass('active');
-    $('.nav-open').next('nav').slideToggle();
+  $('.nav-open').click(function () { //クリックした時に
+    $('.nav-open').toggleClass('active'); //.nav-openクラスにactiveクラスを付与する
+    $('.nav-accordion').slideToggle(); //.nav-accordionをアコーディオンメニューで表示する
   });
 }));
 

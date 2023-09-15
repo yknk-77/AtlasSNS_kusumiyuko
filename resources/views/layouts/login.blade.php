@@ -32,7 +32,7 @@
             <p class="nav-open">{{ Auth::user()->username }}　さん</p>
             <img class="icon nav-open" src="{{ asset('images/icon1.png') }}" alt="{{ Auth::user()->username }}さんのアイコン">
             <!-- アコーディオン部分 -->
-            <nav>
+            <nav class="nav-accordion">
                 <ul>
                     <li><a class="nav-item gray" href="/top">HOME</a></li>
                     <li><a class="nav-item gray" href="/profile">プロフィール編集</a></li>

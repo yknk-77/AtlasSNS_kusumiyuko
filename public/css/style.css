@@ -194,8 +194,8 @@ p.nav-open {
 }
 
 .modal {
-  width: 65%;
-  height: 80%;
+  width: 50%;
+  height: 40%;
   border: 1px solid #000;
   position: fixed;
   top: 50%;
@@ -213,12 +213,11 @@ p.nav-open {
 
 .modal p {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
-  text-align: center;
   transform: translate(-50%, -50%);
   z-index: 10;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .modal-close-wrap {
@@ -252,6 +251,13 @@ p.nav-open {
 
 .modal-close span:nth-child(2) {
   transform: rotate(-45deg);
+}
+
+.post-edit {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #9B9B9B;
+    color: #222;
 }
 
 .btn-delete:hover {

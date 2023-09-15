@@ -31,14 +31,15 @@
 </div>
 <!-- タイムライン表示 -->
 <div class="timeline-wrapper">
-  @foreach($posts as $post)
+  @foreach($posts as $post) <!-- ←繰り返し表示する -->
   <div class="timeline-item">
     <tr>
       <td> <a href="{{$post->user_id}}/profile"><img class="image-circle" src="{{ asset('images/' . $post->images ) }}" alt="ユーザーアイコン"></a> </td>
       <td>{{ $post->username }}</td>
       <td>{{ $post->post }}</td>
       <td>{{ $post->created_at }}</td>
-      <!-- <div>{{ $post->post }}</div> -->
+
+      <!-- もしidが投稿したユーザーのidなら -->
       @if(Auth::id()==$post->user_id)
       <td>
         <!-- モーダルウィンドウオープン時の外側部分 -->
@@ -52,7 +53,7 @@
               <span></span>
             </button>
           </div>
-          <p>コンテンツ・内容が入ります。</p>
+          <p class="post-edit">投稿内容の初期値を表示する</p>
         </div>
 
         <!-- 投稿編集ボタン -->
@@ -67,6 +68,8 @@
         </a>
       </td>
       @endif
+      <!-- もしidが投稿したユーザーのidなら ここまで -->
+
     </tr>
   </div>
   @endforeach
