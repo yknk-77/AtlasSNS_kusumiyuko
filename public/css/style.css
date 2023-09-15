@@ -42,12 +42,15 @@ nav a:hover {
 }
 
 .nav-open {
-    width: 200px;
-    padding: 15px;
+    width: 240px;
     color: #fff;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     position: relative;
+}
+
+p.nav-open {
+    margin: 0;
 }
 
 /* 閉じている時 */
@@ -56,10 +59,11 @@ nav a:hover {
     border-top: solid 3px #fff;
     content: "";
     display: block;
-    height: 10px;
-    width: 10px;
+    height: 14px;
+    width: 14px;
     position: absolute;
-    right: 25px;
+    right: 24px;
+    top: 8px;
     transform: rotate(135deg);
     transition: transform .2s ease-in-out, top .2s ease-in-out;
 }

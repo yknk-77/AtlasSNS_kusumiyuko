@@ -40,7 +40,6 @@
       <td>{{ $post->created_at }}</td>
       <!-- <div>{{ $post->post }}</div> -->
       @if(Auth::id()==$post->user_id)
-      <!-- 投稿編集ボタン -->
       <td>
         <!-- モーダルウィンドウオープン時の外側部分 -->
         <div class="overlay" id="js-overlay"></div>
@@ -56,6 +55,7 @@
           <p>コンテンツ・内容が入ります。</p>
         </div>
 
+        <!-- 投稿編集ボタン -->
         <button type="button" class="btn-update" id="js-open" data-toggle="modal" data-target="#Modal" data-whatever="{{ $post->post }}" data-post-id="{{$post->id}}">
           <img src="{{ asset('images/edit.png') }}" alt="編集" width="25px" height="auto">
         </button>
