@@ -8,6 +8,7 @@
     <meta name="top" content="トップページ" />
     <title></title>
     <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }} ">
     <!--スマホ,タブレット対応-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -31,7 +32,7 @@
             <p class="nav-open">{{ Auth::user()->username }}　さん</p>
             <img class="icon nav-open" src="{{ asset('images/icon1.png') }}" alt="{{ Auth::user()->username }}さんのアイコン">
             <!-- アコーディオン部分 -->
-            <nav>
+            <nav class="nav-accordion">
                 <ul>
                     <li><a class="nav-item gray" href="/top">HOME</a></li>
                     <li><a class="nav-item gray" href="/profile">プロフィール編集</a></li>
