@@ -37,11 +37,16 @@ Route::post('/added', 'Auth\RegisterController@added');
 //ログイン中のページ アクセス制限
 Route::group(['middleware' => 'auth'], function () {
 
+<<<<<<< HEAD
   // トップ画面 投稿
   Route::get('/top', 'PostsController@index'); //top画面表示
   Route::post('/top', 'PostsController@post'); //投稿機能
   Route::get('/top', 'PostsController@show'); //タイムライン表示機能
   Route::post('/top', 'PostsController@update'); //投稿編集機能
+=======
+  // トップ画面
+  Route::get('/top', 'PostsController@index');
+>>>>>>> parent of 149636d (投稿の登録処理を実装しました。)
 
   // プロフィール画面表示
   Route::get('/profile', 'UsersController@show');
