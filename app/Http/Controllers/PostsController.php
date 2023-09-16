@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\User;
+use App\Post;
+
 
 class PostsController extends Controller
 {
@@ -14,6 +19,8 @@ class PostsController extends Controller
 
     //
     public function index(){
+    public function index()
+    {
         return view('posts.index');
     }
 <<<<<<< HEAD
