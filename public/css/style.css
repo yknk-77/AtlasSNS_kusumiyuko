@@ -129,7 +129,6 @@ p.nav-open {
     color: #848484;
 }
 
-<<<<<<< HEAD
 /* トップ画面 */
 .post-wrapper {
     width: 100%;
@@ -265,8 +264,6 @@ p.nav-open {
     /*  */
 }
 
-=======
->>>>>>> parent of 149636d (投稿の登録処理を実装しました。)
 /* プロフィール編集画面 */
 .form {
     margin-top: 80px;

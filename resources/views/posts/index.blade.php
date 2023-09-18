@@ -2,7 +2,6 @@
 
 @section('content')
 
-<<<<<<< HEAD
 {!! Form::open(['url' => '/top']) !!}
 <!-- 脆弱性対策 -->
 @csrf
@@ -78,10 +77,5 @@
 
 
 {!! Form::close() !!}
-=======
-<!-- 投稿フォーム -->
-<h2>機能を実装</h2>
-
->>>>>>> parent of 149636d (投稿の登録処理を実装しました。)
 
 @endsection
