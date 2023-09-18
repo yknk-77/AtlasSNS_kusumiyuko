@@ -2,7 +2,7 @@
 
 @section('content')
 
-{!! Form::open(['url' => '/top']) !!}
+{!! Form::open(['url' => '/post']) !!}
 <!-- 脆弱性対策 -->
 @csrf
 
